@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+
+<body class=" bg-col1">
+
+    <header>
+
+        <div class="relative w-full h-[100px] bg-col2 grid grid-cols-2 ">
+            <button id="EditBtn"
+                class="m-auto relative bg-[#346b4a] w-fit h-fit p-[1%] rounded-lg  ml-[80%]  hover:bg-[#2a6bc0] ">
+                <p class="text-center  text-col4 text-3xl font-bold select-none">Edit</p>
+            </button>
+            <button id="ThisWeekBtn"
+                class="m-auto relative bg-[#346b4a] w-fit h-fit p-[1%]  rounded-lg mr-[80%]  hover:bg-[#2a6bc0] ">
+                <p class="text-center  text-col4 text-3xl font-bold select-none">This week</p>
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="ThisWeekPage" class=" w-[60vw] h-[70vh] bg-col2 mt-[10vh] relative m-auto rounded-lg">
+
+            <div class="grid grid-cols-3 gap-10 relative ml-[2.5%]">
+                <div class=" mt-[72%]  w-[17vw] h-[10vw] bg-col3 rounded-lg">
+                    <p id="playerOne" class="text-center mt-[15%] text-col4 text-5xl font-bold">Celvin</p>
+                    <p id="playerOneWeeks" class="text-center mt-[2%] text-col4 text-xl font-bold">Weeks hosted: 0</p>
+                </div>
+
+                <div class=" mt-[80%]  w-[17vw] h-fit bg-col3 rounded-lg ">
+                    <p class="text-center mt-[3%] text-col4 text-3xl font-bold">This weeks theme:</p>
+                    <p id="theme" class="text-center  text-col4 text-3xl font-bold">Among Us</p>
+                </div>
+
+                <div class=" mt-[72%] w-[17vw] h-[10vw] bg-col3 rounded-lg ">
+                    <p id="playerTwo" class="text-center mt-[15%] text-col4 text-5xl font-bold">Emannen</p>
+                    <p id="playerTwoWeeks" class="text-center mt-[2%] text-col4 text-xl font-bold">Weeks hosted: 420
+                    </p>
+                </div>
+            </div>
+
+            <div class="m-auto mt-[-35%] relative bg-col3 w-fit h-fit p-[1%]  rounded-lg ">
+                <p id="weekCounter" class=" pt-[4%] text-col4 text-3xl font-bold">Week 3</p>
+            </div>
+
+            <div class="relative m-auto w-fit mt-[35%]">
+                <button id="randomBtn" class="bg-[#346b4a] w-fit h-fit p-[10%] rounded-lg hover:bg-[#2a6bc0] ">
+                    <p class="text-center  text-col4 text-3xl font-bold select-none ">Randomize</p>
+                </button>
+            </div>
+
+        </div>
+
+        <div id="EditPage" class="  w-[50vw] h-[80vh] bg-col2 mt-[5vh] relative m-auto rounded-lg pt-[5vh]">
+
+            <div class="  relative m-auto w-[40vw] h-[70vh] grid grid-cols-2">
+                <div class="  w-[90%] h-full ml-[5%] text-center overflow-y-hidden">
+                    <h2 class=" bg-col3 w-full h-fit inline-block text-col4 pb-2 text-5xl rounded-lg ">People</h2>
+
+                    <div class=" bg-col4 w-full h-[70%] mt-[2vh] rounded-lg pt-1 overflow-y-hidden">
+
+                        <ul id="personList" class=" h-[100%] overflow-y-auto" ></ul>
+
+                    </div>
+
+                    <div class=" bg-col3 w-full h-[10%] mt-[0.75vh] grid grid-cols-3 rounded-lg">
+                        <button id="peopleAdd" class=" text-col4 w-fit h-fit px-[5%] py-[3%] bg-[#346b4a] rounded-lg relative m-auto 2xl:text-2xl text-lg">Add</button>
+                        <button id="peopleRemove" class=" text-col4 w-fit h-fit px-[5%] py-[3%] bg-[#346b4a] rounded-lg relative m-auto 2xl:text-2xl text-lg">Remove</button>
+                        <button id="peopleClear" class=" text-col4 w-fit h-fit px-[5%] py-[3%] bg-[#346b4a] rounded-lg relative m-auto 2xl:text-2xl text-lg">Clear</button>
+                    </div>
+
+
+                    <div class="  w-full h-[7%] mt-[0.75vh]">
+                        <input id="personInput" type="text" class=" w-full h-full outline-none pl-[2%] rounded-xl text-2xl">
+                    </div>
+
+                </div>
+
+                <div class="  w-[90%] h-full ml-[5%] text-center overflow-y-hidden ">
+                    <h2 class=" bg-col3 w-full h-fit inline-block text-col4 pb-2 text-5xl rounded-lg ">Themes</h2>
+
+                    <div class=" bg-col4 w-full h-[70%] mt-[2vh] rounded-lg pt-1 overflow-y-hidden">
+
+                        <ul id="themeList" class=" h-[100%] overflow-y-auto" ></ul>
+
+                    </div>
+
+                    <div class=" bg-col3 w-full h-[10%] mt-[0.75vh] grid grid-cols-4 rounded-lg">
+                        <button id="themeAdd" class=" text-col4 w-fit h-fit px-[5%] py-[3%] bg-[#346b4a] rounded-lg relative m-auto 2xl:text-xl ">Add</button>
+                        <button id="themeRemove" class=" text-col4 w-fit h-fit px-[5%] py-[3%] bg-[#346b4a] rounded-lg relative m-auto 2xl:text-xl ">Remove</button>
+                        <button id="themeClear" class=" text-col4 w-fit h-fit px-[5%] py-[3%] bg-[#346b4a] rounded-lg relative m-auto 2xl:text-xl ">Clear</button>
+                        <button id="themeReset" class=" text-col4 w-fit h-fit px-[5%] py-[3%] bg-[#346b4a] rounded-lg relative m-auto 2xl:text-xl ">Reset</button>
+                    </div>
+
+
+                    <div class="  w-full h-[7%] mt-[0.75vh]">
+                        <input id="themeInput" type="text" class=" w-full h-full outline-none pl-[2%] rounded-xl text-2xl">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
